@@ -11,7 +11,7 @@
 
 |spring.datasource.hikari.jdbcUrl
 |FINERACT_HIKARI_JDBC_URL
-|jdbc:mariadb://localhost:3306/fineract_tenants
+|jdbc:mariadb://localhost:3306/fineract_tenants?allowPublicKeyRetrieval=true&useSSL=false
 |TBD
 
 |spring.datasource.hikari.username

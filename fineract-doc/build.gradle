@@ -76,28 +76,28 @@ asciidoctor {
 //     dependsOn ':fineract-client:buildAsciidoc'
 // }
 
-asciidoctorPdf {
-    languages 'en'
-
-    baseDir 'src/docs'
-    sourceDir 'src/docs'
-    sources {
-        include('index.adoc')
-    }
-    outputDir 'build/docs/pdf'
-
-    logging.captureStandardError LogLevel.INFO
-
-    // TODO: @vidakovic prepare a nicer theme
-    // theme 'fineract-default'
-    // pdfThemes {
-    //     local 'fineract-default', {
-    //         themeDir = "$projectDir/src/resources/themes"
-    //     }
-    // }
-    // fontsDir "$projectDir/src/resources/fonts"
-    dependsOn(':fineract-client:clean', ':fineract-client:buildAsciidoc')
-}
+//asciidoctorPdf {
+//    languages 'en'
+//
+//    baseDir 'src/docs'
+//    sourceDir 'src/docs'
+//    sources {
+//        include('index.adoc')
+//    }
+//    outputDir 'build/docs/pdf'
+//
+//    logging.captureStandardError LogLevel.INFO
+//
+//    // TODO: @vidakovic prepare a nicer theme
+//    // theme 'fineract-default'
+//    // pdfThemes {
+//    //     local 'fineract-default', {
+//    //         themeDir = "$projectDir/src/resources/themes"
+//    //     }
+//    // }
+//    // fontsDir "$projectDir/src/resources/fonts"
+//    dependsOn(':fineract-client:clean', ':fineract-client:buildAsciidoc')
+//}
 
 task doc(type: Zip) {
     dependsOn(asciidoctor, asciidoctorPdf)
